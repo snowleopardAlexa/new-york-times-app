@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
-import { Home } from './pages/Home';
-import { About } from './pages/About';
-import { Articles } from './pages/Articles';
+import  Home  from './pages/Home';
+import  About  from './pages/About';
+import  Articles  from './pages/Articles';
 
 const App = () => {
   return (
