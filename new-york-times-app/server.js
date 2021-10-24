@@ -4,6 +4,9 @@ import { renderToString }  from 'react-dom/server';
 
 const app = express();
 
+// we ran: npm run build to connect react app with backend
+app.use(express.static('./build', { index: false }))
+
 app.get('/*', (req, res) => {
     const reactApp = renderToString (
         <h1>Hello from the server side!</h1>
@@ -20,4 +23,6 @@ app.get('/*', (req, res) => {
     );
 });
 
-
+app.listen(8080, () => {
+    console.log('Server is listening on port 8080')
+})
